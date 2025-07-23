@@ -1,0 +1,1 @@
+Encapsulation means bundling data and the actions on that data into one unit (like a class), and hiding the internal details from the outside world. It’s like a medicine capsule — it holds the ingredients and only allows access to what’s intended.
