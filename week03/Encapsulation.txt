@@ -1,1 +1,28 @@
 Encapsulation means bundling data and the actions on that data into one unit (like a class), and hiding the internal details from the outside world. It’s like a medicine capsule — it holds the ingredients and only allows access to what’s intended.
+
+
+One significant benefit of encapsulation in programming is enhanced security and data integrity. By restricting direct access to an object's internal state and requiring all interactions to occur through well-defined interfaces (such as getters and setters), encapsulation ensures that data cannot be altered arbitrarily. This control helps prevent unintended interference and maintains the consistency and reliability of the software
+
+An example is a  Bank Account Management System;
+A BankAccount class encapsulates sensitive data like the account balance, ensuring it's protected from unauthorized direct access. Instead, interactions happen through well-defined public methods such as deposit, withdraw, and checkBalance:
+
+
+public class BankAccount {
+    private double balance;
+
+    public BankAccount(double initial) {
+        this.balance = initial;
+    }
+
+    public void deposit(double amount) {
+        if (amount > 0) balance += amount;
+    }
+
+    public void withdraw(double amount) {
+        if (amount > 0 && amount <= balance) balance -= amount;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+}
